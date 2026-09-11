@@ -1,5 +1,5 @@
 ---
-name: run-profiling
+name: profiling-pipeline
 description: Profile FLAME for CPU time, memory, or instruction-level cost, and produce a structured optimisation report. Use when asked to profile FLAME, find hotspots or bottlenecks, investigate why a run is slow or uses too much memory, produce a flamegraph or callgraph, run perf / heaptrack / valgrind / callgrind / massif / cachegrind on flame_exe, measure the benefit of the caching or equivalence layers, or decide what to optimise next.
 ---
 
@@ -42,7 +42,7 @@ cmake -S code/lib -B code/lib/build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_IN
 cmake -S code/lib -B code/lib/build -DCMAKE_CXX_FLAGS_RELEASE="-O3 -g -DNDEBUG -fno-omit-frame-pointer" -DCMAKE_INSTALL_PREFIX=code/lib/build
 ```
 
-Then rebuild the process against that prefix (see the `run-build` skill). Use the
+Then rebuild the process against that prefix (see the `build` skill). Use the
 **same** flags for library and process or the stacks will be half-symbolised.
 
 `-fno-omit-frame-pointer` is worth the ~1% it costs: it enables `--call-graph fp`,

@@ -1,5 +1,5 @@
 ---
-name: unit-tests
+name: unit-test
 description: Build and run the FLAME doctest unit tests in code/lib/test — all of them, or one test binary, test case, or subcase. Use when asked to run unit tests, run ctest, check that a change did not break the tests, run a named test (test_phase_space, test_fks_mappings, test_cache, test_histogram, test_lorentz_four_vector, test_configuration, test_dynamic_particle), filter to one TEST_CASE or SUBCASE, debug a failing or timing-out unit test, or add a new test file to the suite.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: run-build
+name: build
 description: Build the FLAME library and a process executable, and launch flame_exe runs. Use when asked to build, compile, rebuild, or configure FLAME or one of its processes (DY, VJ, ggH, dijet, diboson, epemjj, hvq), when a CMake/link error appears in a FLAME build, when choosing CMake options (OpenLoops, LHAPDF, hoppet, kakuhen, DISABLE_EQUIV, DISABLE_CACHE_*, VERBOSE_LEVEL, DEBUG_PHASESPACE_GENERATE), when running flame_exe with a runcard, or when setting up parallel/staged production runs on a cluster.
 ---
 
