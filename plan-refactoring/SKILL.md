@@ -81,7 +81,36 @@ State these in every plan, and hold to them:
 5. **No `auto`** except where the type genuinely cannot be named.
 6. **Design only.** No new physics, no dead-code removal, no performance work smuggled
    in alongside. Each of those is its own session.
-7. Follow `GUIDELINES.md` (the `check-conventions` skill).
+7. **Sparse comments.** A short doxygen block on each function saying what it is for,
+   and a one-line comment above each stage of a genuinely multi-step operation. Nothing
+   else — see below.
+8. Follow `GUIDELINES.md` (the `check-conventions` skill).
+
+### Comment discipline
+
+Refactoring attracts commentary: a moved function invites an explanation of why it
+moved, a split class invites a note about what used to be where. Resist it. Git holds
+the history, and a comment outlives the change that prompted it.
+
+**Write:**
+
+- A short doxygen block on a function — what it is for, plus any parameter that is not
+  self-describing. One or two lines, not a paragraph.
+- A one-line comment above each stage of an operation that genuinely has several
+  stages, so the stages are findable. One line per stage.
+- The logbook citation when the code implements a specific equation. Required by
+  `GUIDELINES.md`, and it names the entry *and* the equation.
+
+**Do not write:**
+
+- Restatements of the code (`// loop over channels` above a loop over channels).
+- History — what this used to be, where it moved from, what it was called before.
+- Notes addressed to the reviewer or explaining the refactoring itself.
+- Commented-out code. Delete it.
+- Further comments inside a block that already has its one-line header.
+
+When in doubt leave it out. Under-commenting is easy to fix later; a stale comment is
+worse than no comment.
 
 ## The verification section
 
